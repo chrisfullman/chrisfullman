@@ -1,16 +1,27 @@
-/*
-This is a CSS comment. It's helpful to place notes here.
-Anything you type between the opening [forward slash + asterisk] and the
-closing [asterisk + forward slash] is not considered a CSS rule.
-Use comments to organize your CSS file, indicate sections, or explain
-what rules below a comment may affect on the website.
-*/
-
-body {
-  padding: 25px;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
 }
 
-p {
-  color: black;
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.carousel-inner img {
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  height: 400px;
+  min-height: 200px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
 }

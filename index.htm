@@ -1,47 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Chris Fullman's Codeacademy Website</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <style>
-    /*
-    You might wonder why this CSS rule below is not in the main.css file.
-    As the "cascading" in CSS implies, CSS cascades from the top down.
-    Like math, the order of operations is also imporant.
+    <title>Chris Fullman's GFAC Bootstrap Lesson</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, noimageindex, nofollow, nosnippet, noarchive">
+    <!-- BOOTSTRAP LINKS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    Because we are importing or linking the main.css file above, the rules
-    inside that CSS file are considered the top-most CSS rules for the page.
+    <!-- FontAwesome is a free service that provides icon fonts to use anywhere on the web! -->
+    <!-- Learn more at fontawesome.com -->
+    <script src="https://kit.fontawesome.com/db630e2aa8.js" crossorigin="anonymous"></script>
 
-    But this rule below the comment is considered an override, meaning it will
-    change the color of the p tags, even though there is a color set in the
-    main.css file. Why? Because the CSS rule below is specified *after* we
-    loaded the main.css file.
-    */
-    p {
-      color: #ab2c46;
-    }
-    </style>
+    <!-- MAIN.CSS LINK  -->
+    <link rel="stylesheet" type="text/css" href="main.css"/>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Chris Fullman's Codeacademy Website</h1>
-        <span>Just following along Ayana's coding lesson</span>
-        <ul>
-          <a href="#">Home</a>
-        </ul>
-      </header>
-      <div class="main">
-        <h3>Website Copy</h3>
-        <p>This is the content of my website. It's not styled yet, but we'll get there soon. Oh, here's a link to <a href="https://chrisfullman.com" target="_blank">my actual website</a>.</p>
-        <img src="https://media3.giphy.com/media/lJNoBCvQYp7nq/giphy.gif?cid=ecf05e47809f146203e6bc8ea997ee264983b6adb42349ba&rid=giphy.gif"/>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Chris Fullman </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Intro</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#values">Values</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <footer>
-        <p>Open source for anyone to use and adapt, though this is more applicable to the
-          participants of the <a href="https://girlsforachange.org" target="_blank">Girls For A Change</a>'s Girl Ambassador Program's
-          "Introduction to Coding for Community" course.</p>
-      </footer>
+    </nav>
+
+    <!-- YOUR CAROUSEL STARTS HERE -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+
+        <!-- SLIDE 1 -->
+        <div class="item active">
+          <img src="images/davisco-5E5N49RWtbA-unsplash.jpg" alt="An orange, which is sliced in half, is painted blue against a blue background" style="object-position: 80% center;">
+          <div class="carousel-caption">
+            <h3>Welcome to my Bootstrap Sample Template</h3>
+            <p>This page is part of a coding course I'm assisting with for Girls For A Change.</p>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="item">
+          <img src="images/adam-smigielski-kya4bNYMUus-unsplash.jpg" alt="Oranges on a table, with some that are sliced open"  style="object-position: bottom center;">
+          <div class="carousel-caption">
+            <h3>Yes, I love oranges.</h3>
+            <p>Orange is my favorite color, too.</p>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="item">
+          <img src="https://placehold.it/1200x400?text=IMAGE 3" alt="Image">
+          <div class="carousel-caption">
+            <h3>TITLE FOR SLIDE 3</h3>
+            <p>Desription</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
+    <!-- YOUR CAROUSEL ENDS HERE -->
+
+    <br><br><br>
+
+
+    <!-- YOUR "ABOUT" SECTION -->
+    <a id="about"></a>
+    <div class="container text-center">
+      <h2>About Me</h2>
+      <p>I'm a member of the Board of Directors for <a href="https://girlsforachange.org/" target="_blank">Girls For A Change</a>, a nonprofit organizatio in Central Virginia that serves girls of color from elementary to high school and beyond. We provide STEAM-focused training, certifications, networking opportunities, soft skill coaching, paid internships, and more.</p>
+      <p>Outside of Girls For A Change, I run my own digital marketing studio, <a href="https://antimatter.co/" target="_blank">Antimatter Co.</a>, offering WordPress development, maintenance, and security services for nonprofits, agencies, and small-to-Fortune 500 organizations.
+    </div>
+    <!-- END OF "ABOUT" SECTION -->
+
+    <br><br><br>
+
+    <!-- START OF "WHAT WE DO" SECTION -->
+    <a id="work"></a>
+    <div class="container text-center">
+      <h3>What I Do</h3><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+          <br>
+          <p>Current Project</p>
+        </div>
+        <div class="col-sm-4">
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+          <br>
+          <p>Project 2</p>
+        </div>
+        <div class="col-sm-4">
+          <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+          <br>
+          <p>Project 1</p>
+        </div>
+      </div>
+    </div>
+    <!-- END OF "WHAT WE DO" SECTION -->
+
+    <br><br><br>
+
+    <!-- YOUR "VALUES" SECTION -->
+    <a id="values"></a>
+    <div class="container text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h3>My Values</h3>
+          </div>
+          <div class="col-sm-3">
+            <h4>It's Nice to Be Nice</h4>
+            <p>Some text...</p>
+          </div>
+          <div class="col-sm-3">
+            <h4>Always Helpful</h4>
+            <p>Some text...</p>
+          </div>
+          <div class="col-sm-3">
+            <h4>Caring About Others</h4>
+            <p>Some text...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+    <!-- END OF "VALUES" SECTION -->
+
+    <!-- HERE IS WHERE YOUR VIDEO SECTION BEGINS -->
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="https://placehold.it/150x80?text=VIDEO" class="img-responsive" style="width:100%" alt="Image">
+        </div>
+        <div class="col-sm-6">
+          <h4>Learn More Section</h4>
+          <br>
+          <p>Tell us more about your idea...</p>
+        </div>
+      </div>
+    </div>
+    <!-- HERE IS WHERE YOUR VIDEO SECTION ENDS -->
+
+    <!-- YOUR "FOOTER" SECTION -->
+    <footer>
+      <a id="contact"></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4>Contact</h4>
+            <a href="https://chrisfullman.com" target="_blank">Personal Website/Blog</a><br>
+            <a href="mailto:me@chrisfullman.com">me@chrisfullman.com</a>
+          </div>
+          <div class="col-sm-6">
+            <img src="https://placehold.it/150x80?text=LOGO" class="img-responsive" style="width:50%" alt="Image">
+            <br><br>
+            <p>A concluding tagline about your idea. Vision Statement?</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF "FOOTER" SECTION -->
+
   </body>
 </html>
